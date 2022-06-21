@@ -4,6 +4,8 @@ node {
 
 stage('Check-out') {
 echo 'From check-out stage'
+git branch: 'main', url: 'https://github.com/Praveenreddy003/examples.git'
+
 }
 
 
