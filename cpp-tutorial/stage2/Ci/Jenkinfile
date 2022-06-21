@@ -11,7 +11,13 @@ git branch: 'main', url: 'https://github.com/Praveenreddy003/examples.git'
 
 
 stage('Bazel Build') {
+sh '''
+ls 
+cd cpp-tutorial/stage2/Ci
+bazel build //main:hello-world
 echo 'From Bazel Build stage'
+
+'''
 }
 
 
