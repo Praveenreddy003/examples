@@ -1,0 +1,25 @@
+node {
+
+
+
+stage('Check-out') {
+
+git branch: 'main', url: 'https://github.com/Praveenreddy003/examples.git'
+
+}
+
+
+
+stage('Bazel Build') {
+sh '''
+ls 
+cd cpp-tutorial/stage3
+bazel build //main:hello-world
+
+
+'''
+}
+
+
+
+}
